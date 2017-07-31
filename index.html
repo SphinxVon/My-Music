@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN" onselectstart="return false;">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>MyMusic</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/public.css">
+</head>
+<body>
+    <div id="wrap">
+        <div class="face-btn">
+            <p class="setting"><a href="javascript:;" id="set-btn" ondragstart="return false">皮肤设置</a></p>
+            <div class="skin-content">
+                <a href="#carton" class="active">卡通&nbsp;/</a>
+                <a href="#people">人物&nbsp;/</a>
+                <a href="#scenery">风景</a>
+                <div class="items">
+                    <ul class="atlas mar-t-10 clear-fix active" id="carton">
+                        <li class="mar-b-10 fl-l"><img src="img/carton-1.jpg" alt="" ondragstart="return false"></li>
+                        <li class="mar-b-10 fl-r"><img src="img/carton-2.jpg" alt="" ondragstart="return false"></li>
+                        <li class="fl-l"><img src="img/carton-3.jpg" alt="" ondragstart="return false"></li>
+                        <li class="fl-r"><img src="img/carton-4.jpg" alt="" ondragstart="return false"></li>
+                    </ul>
+                    <ul class="atlas mar-t-10 clear-fix" id="people">
+                        <li class="mar-b-10 fl-l"><img src="img/people-1.jpg" alt="" ondragstart="return false"></li>
+                        <li class="mar-b-10 fl-r"><img src="img/people-2.jpg" alt="" ondragstart="return false"></li>
+                        <li class="fl-l"><img src="img/people-3.jpg" alt="" ondragstart="return false"></li>
+                        <li class="fl-r"><img src="img/people-4.jpg" alt="" ondragstart="return false"></li>
+                    </ul>
+                    <ul class="atlas mar-t-10 clear-fix" id="scenery">
+                        <li class="mar-b-10 fl-l"><img src="img/scenery-2.jpg" alt="" ondragstart="return false"></li>
+                        <li class="mar-b-10 fl-r"><img src="img/scenery-3.jpg" alt="" ondragstart="return false"></li>
+                        <li class="fl-l"><img src="img/scenery-4.jpg" alt="" ondragstart="return false"></li>
+                        <li class="fl-r"><img src="img/scenery-5.jpg" alt="" ondragstart="return false"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="music-content">
+            <div id="music-menu">
+                <div class="music-wrap">
+                    <div class="music-list">
+                        <ul class=""></ul>
+                    </div>
+                    <div class="scroll-bar">
+                        <div id="scroll"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="lyric-on-off">词
+                <div class="lyric-wrap">
+                    <div class="lyric-content">
+                        <ul>
+                            <li>海阔天空-Beyond</li>
+                            <li class="active">今天我寒夜里看雪飘过</li>
+                            <li>怀着冷却了的心窝飘远方</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="audio-disc">
+                <div class="singer-pic" ondragstart="return false;">
+                    <img src="" alt="" ondragstart="return false;">
+                </div>
+            </div>
+            <div class="audio">
+                <p class="song-name"></p>
+                <p class="singer-name"></p>
+                <p class="album"></p>
+                <div class="control-tab1">
+                    <span class="like-btn love1"></span>
+                    <span class="updown-btn"></span>
+                    <span class="volume-btn">
+                        <span class="volume-bar"><b id="volume"></b></span>
+                    </span>
+                </div>
+                <div class="control-tab2">
+                    <span class="current-time">00:00</span>
+                    <span class="progress-bar"><b id="progress"></b></span>
+                    <span class="total-time">00:00</span>
+                </div>
+                <div class="control-tab3">
+                    <span class="play-model loop"></span>
+                    <span class="prev"></span>
+                    <span class="play-state"></span>
+                    <span class="next"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio src="mp3/1.mp3" id="audio"></audio>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/js-sphinx-1.0.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/music.js"></script>
+<script>
+
+  /*  console.log(audio.currentTime);
+    setInterval(function () {
+        console.log(audio.currentTime);
+        console.log(audio.duration);
+    },3000)*/
+</script>
+</body>
+</html>

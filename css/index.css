@@ -1,0 +1,408 @@
+#wrap{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("../img/scenery-1.jpg") no-repeat center/cover;
+    overflow: hidden;
+}
+/*皮肤设置*/
+#wrap .face-btn{
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    width: 360px;
+    z-index: 2;
+    /*border: 1px solid #FFFFFF;*/
+}
+#wrap .face-btn:hover{}
+/*皮肤设置按钮*/
+#wrap .face-btn .setting{
+    margin-left: 105px;
+    width: 80px;
+    padding: 0 25px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 20px;
+    background:rgba(0,0,0,.2) url("../img/face.png") 20px center no-repeat;
+    text-align: right;
+    cursor: move;
+}
+#wrap .face-btn .setting a{
+    color: #FFFFFF;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#wrap .face-btn .setting  a:hover{color: #252525;}
+/*皮肤设置盒子*/
+#wrap .face-btn .skin-content{
+    display: none;
+    margin-top: 10px;
+    width: 90%;
+    padding: 5%;
+    background-color:rgba(0,0,0,.2) ;
+    cursor: move;
+}
+#wrap .face-btn .skin-content .active{color: #FFFFFF}
+#wrap .face-btn .skin-content a{color: #dddddd}
+#wrap .face-btn .skin-content a:hover{color: #FFFFFF}
+#wrap .face-btn .skin-content .items{position: relative;width: 100%;height: 210px;}
+#wrap .face-btn .skin-content .atlas{display: none;width: 100%;position: absolute;left: 0;top: 0;}
+#wrap .face-btn .skin-content .atlas.active{display: block}
+#wrap .face-btn .skin-content .atlas li{
+    width: 145px;
+    height: 85px;
+    padding: 5px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+#wrap .face-btn .skin-content .atlas li img{width: 100%;height: 100%}
+/*音乐盒子*/
+#wrap  .music-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 510px;
+    margin-left: -275px;
+    margin-top: -260px;
+    background-color: rgba(255,255,255,.3);
+    cursor: move;
+}
+/*音乐列表按钮*/
+#music-menu{
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 24px;
+    height: 25px;
+    background: url("../img/menu.png") center/cover no-repeat;
+    z-index: 1;
+    cursor: pointer;
+}
+#music-menu .music-wrap{
+    display: none;
+    position: absolute;
+    left: -260px;
+    top: -10px;
+    padding: 20px 30px;
+    width: 190px;
+    height: 470px;
+    background: rgba(0,0,0,.5);
+    cursor: move;
+}
+#music-menu .music-wrap .music-list{
+    position: absolute;
+    top: 20px;
+    width: 190px;
+    height: 470px;
+    overflow: hidden;
+}
+#music-menu .music-wrap .music-list ul{
+    position: absolute;
+    top: 0;
+    width: 190px;
+    cursor: default;
+}
+#music-menu .music-wrap .scroll-bar{
+    /* opacity: 0;
+     filter:alpha(opacity=0);*/
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    width: 3%;
+    height: 470px;
+    margin-top: -235px;
+    border-radius: 20px;
+    background: #6d6c6c;
+    background: linear-gradient(#087aff,#ff3300,#13d0ff,#23ff6b,#00BCD4,#1b6d85,#9933ff,#9D0000);
+    cursor: default;
+    overflow: hidden;
+}
+#music-menu .music-wrap .scroll-bar #scroll{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    /*height: 60px;//高度随内容变化*/
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0.7);
+    cursor: default;
+    /*filter:alpha(opacity=0);*/
+}
+#music-menu .music-list ul li{
+    color: #FFFFFF;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    border-bottom: 1px dotted #b8b8b8;
+
+}
+#music-menu .music-list ul li:after{
+    content: '';
+    display: block;
+    overflow: hidden;
+    clear: both;
+}
+#music-menu .music-list ul li:hover{color: #00bbff}
+#music-menu .music-list ul li.active{background: rgba(0,127,127,.5);color: #00bbff}
+#music-menu .music-list ul li span{display: block;}
+#music-menu .music-list ul li .like{
+    float: left;
+    margin-left: 10px;
+    margin-top: 12px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #929292;
+}
+#music-menu .music-list ul li .like.active{background-color: red;}
+#music-menu .music-list ul li .song-name{
+    float: left;
+    margin-left: 5px;
+ }
+#music-menu .music-list li .singer-name{
+    float: right;
+    margin-right: 10px;
+}
+/*歌词开关按钮*/
+#lyric-on-off{
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    border-radius: 50%;
+    background-color: #fe9fd8;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
+}
+/*#lyric-on-off:hover{color: #b0bfb0; }*/
+#lyric-on-off .lyric-wrap{
+    position: absolute;
+    left: 30px;
+    top: -10px;
+    width: 0;
+    height: 510px;
+    background: rgba(0,0,0,.5);
+    overflow: hidden;
+}
+#lyric-on-off .lyric-wrap .lyric-content{
+    position: relative;
+    margin: 20px 30px;
+    width: 340px;
+    height: 470px;
+    overflow: hidden;
+}
+#lyric-on-off .lyric-wrap .lyric-content ul{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#lyric-on-off .lyric-wrap .lyric-content ul li:first-child{font-size: 16px;font-weight: bold;margin-bottom: 5px}
+#lyric-on-off .lyric-wrap .lyric-content ul li{
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+#lyric-on-off .lyric-wrap .lyric-content ul li.active{color: deeppink}
+#wrap .music-content .audio-disc{
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    width: 240px;
+    height: 240px;
+    margin-left: -120px;
+    border-radius: 50%;
+    background: url("../img/audio-disc.png") center/cover no-repeat;
+    cursor: default;
+}
+#wrap .music-content .audio-disc .singer-pic{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -92.5px;
+    margin-left: -92.5px;
+    width: 180px ;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#wrap .music-content .audio-disc .singer-pic img{
+    width: 174px;
+    height: 174px;
+    border-radius: 50%;
+    border: 3px solid #11fa2c;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#wrap .music-content .audio-disc .singer-pic.rotate{
+    animation: rot 5s infinite linear;
+}
+@keyframes rot {
+    from{transform: rotate(0)}
+    to{transform: rotate(360deg)}
+}
+#wrap .music-content .audio {
+    width: 100%;
+    height: 200px;
+    margin-top: 280px;
+}
+#wrap .music-content .audio p{text-align: center;cursor: default}
+#wrap .music-content .audio .song-name{
+    padding-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+#wrap .music-content .audio .singer-name{font-size: 14px;color: #a3070c}
+#wrap .music-content .audio .album{font-size: 12px;color: #252525}
+#wrap .music-content .audio .control-tab1{
+   width: 100%;
+    height: 20px;
+    padding: 15px 0;
+    cursor: default;
+}
+#wrap .music-content .audio  span{display: inline-block;cursor: pointer;vertical-align: middle}
+#wrap .music-content .audio .control-tab1 .like-btn{
+    margin-left:84px;
+    margin-right: 50px;
+    width: 24px;
+    height: 20px;
+    background: url("../img/love0.png") center/cover no-repeat;
+}
+#wrap .music-content .audio .control-tab1 .like-btn.love1{ background: url("../img/love1.png") center/cover no-repeat;}
+#wrap .music-content .audio .control-tab1 .updown-btn{
+    width: 22px;
+    height: 24px;
+    background: url("../img/updown.png") center 100%  no-repeat;
+}
+#wrap .music-content .audio .control-tab1 .volume-btn{
+    position: relative;
+    width: 16px;
+    height: 22px;
+    margin-left:50px;
+    background: url("../img/volume1.png") center 100%  no-repeat;
+}
+#wrap .music-content .audio .control-tab1 .volume-btn .volume-bar{
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    margin-top: -1.5px;
+    width: 50px;
+    height: 3px;
+    background-color:rgba(255,255,255,.8);
+}
+#wrap .music-content .audio .control-tab1 .volume-btn #volume{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -1.5px;
+    width: 20px;
+    height: 3px;
+    background-color: #929292;
+    z-index: 2;
+}
+#wrap .music-content .audio .control-tab1 .volume-btn #volume:after{
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: -1px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #929292;
+}
+/*音乐播放进度条*/
+#wrap .music-content .audio .control-tab2{
+    padding: 15px 15px;
+    cursor: pointer;
+}
+#wrap .music-content .audio .control-tab2 .progress-bar{
+    position: relative;
+    width: 240px;
+    height: 3px;
+    background-color: #929292;
+    margin-left: 5px;
+}
+#wrap .music-content .audio .control-tab2 .progress-bar #progress{
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 3px;
+    background-color: #11fa2c;
+}
+#wrap .music-content .audio .control-tab2 .progress-bar #progress:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -1px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #11fa2c;
+}
+/*音乐播放控件*/
+#wrap .music-content .audio .control-tab3{
+    width: 100%;
+    padding: 10px 60px;
+    height: 30px;
+}
+#wrap .music-content .audio .control-tab3 .play-model{
+    width: 30px;
+    height: 30px;
+}
+#wrap .music-content .audio .control-tab3 .play-model.loop{
+    background: url("../img/loop.png") center/cover no-repeat;
+}
+#wrap .music-content .audio .control-tab3 .play-model.rand{
+    background: url("../img/rand.png") center/cover no-repeat;
+}
+#wrap .music-content .audio .control-tab3 .play-model.single{
+    background: url("../img/single.png") center/cover no-repeat;
+}
+#wrap .music-content .audio .control-tab3 .prev{
+    margin-left: 40px;
+    width: 23px;
+    height: 27px;
+    background: url("../img/pre.png") center/cover no-repeat;
+}
+#wrap .music-content .audio .control-tab3 .play-state{
+    margin-left: 40px;
+    width: 20px;
+    height: 26px;
+    background: url("../img/play.png") center/cover no-repeat;
+}
+#wrap .music-content .audio .control-tab3 .play-state.pause{
+    background: url("../img/pause.png") center/cover no-repeat;
+}
+#wrap .music-content .audio .control-tab3 .next{
+    margin-left: 40px;
+    width: 23px;
+    height: 27px;
+    background: url("../img/next.png") center/cover no-repeat;
+}
+#wrap .music-content .audio .control-tab3 .play-state{}
+#wrap .music-content .audio .control-tab3 .next{}
+/*
+#test{width: 200px}
+#test li{
+    width: 100%;
+    height: 40px;
+    color: #FFFFFF;
+    text-align: center;
+}*/

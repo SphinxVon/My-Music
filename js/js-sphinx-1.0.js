@@ -94,7 +94,7 @@
             })();
         };
         /*时间版运动插件,在规定时间内完成运动*/
-        function moveByTime(obj,json,time,callback) {
+        function moveByTime(obj,json,time,callback) {//time以毫秒计
             window.requestAnimationFrame = window.requestAnimationFrame || function (a) {return setTimeout(a,1000/60);}
             window.cancelAnimationFrame = window.cancelAnimationFrame || clearTimeout;
             var cssJson = obj.currentStyle||getComputedStyle(obj);
@@ -123,7 +123,10 @@
                 }
             })();
         }
-        /*去掉首位空格符*/
+        /*去掉首尾空格符*/
         trim = function(str) {//去掉开始和结尾空格符
             return str.replace(/(^\s*)|(\s*$)/g,"");
+        };
+        mousewheel = function (obj,scrollFn) {//鼠标滚动事件兼容
+            obj.onmousewheel===null?obj.onmousewheel=scrollFn:obj.addEventListener('DOMMouseScroll',scrollFn);
         };

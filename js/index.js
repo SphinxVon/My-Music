@@ -48,7 +48,6 @@
    });
    /*显示/隐藏歌词*/
     $('#lyric-on-off').click(function (e) {
-        console.log(e.target.id);
         if(e.target.id === 'lyric-on-off'){
             flag2?$('.lyric-wrap').animate({width: '400px'}, "slow"):$('.lyric-wrap').animate({width: '0'}, "slow");
             flag2 = !flag2;
@@ -107,8 +106,13 @@
        });
        /*Jquery兼容鼠标滚轮事件*/
        $wrap.on("mousewheel DOMMouseScroll", function (e) {
-           var $delta = e.originalEvent.wheelDelta  ||  // chrome & ie
-              e.originalEvent.detail ;// firefox
+         /*  var $delta = e.originalEvent.wheelDelta  ||
+              e.originalEvent.detail ;*/
+           var $delta = 0;
+           if ( e.wheelDelta ){ $delta = -e.wheelDelta }      // chrome & ie
+           else if ( e.deltaY     ){ $delta = e.deltaY }// firefox
+           // else if( e.wheelDeltaY ) { $delta = e.wheelDeltaY }
+           else {console.log('get delta,have somethings wrong...');}
            $sTop = $scroll.position().top;
            $delta<0?$sTop += 15:$sTop -= 15;
            var _top = $sTop;
@@ -119,5 +123,6 @@
            $con.css("top",-prop*($con.height()-$wrap.height()));//内容滚动距离=滚动比*可移动距离
            return false;
        });
+
    }
 })();

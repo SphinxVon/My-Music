@@ -6,3 +6,4 @@ https://sphinxvon.github.io/My-Music/<br>
 对于加载缓慢问题，有一下几点改进方法：<br>
 1.通过CSS Sprites技术将小图标整合，减少dom与js请求次数<br>
 2.mp3音乐文件通过ajax技术向公开的音乐接口发送请求，并异步加载<br>
+![](https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif)  
